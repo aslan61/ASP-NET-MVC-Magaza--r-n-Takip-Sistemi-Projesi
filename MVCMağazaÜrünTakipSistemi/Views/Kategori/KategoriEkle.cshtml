@@ -1,0 +1,20 @@
+﻿@model MVCMağazaÜrünTakipSistemi.Models.Siniflar.Kategori
+@{
+    ViewBag.Title = "KategoriEkle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<script src="~/Scripts/jquery-3.6.0.js"></script>
+<br />
+<h2>Yeni Kategori Sayfası</h2>
+<br />
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.KategoriAd)
+    @Html.TextAreaFor(x => x.KategoriAd, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info" id="btn1">Kaydet</button>
+    <script>
+        swal("Kategori Ekleme", "Kategori Başarılı Bir Şekilde Eklendi.", "success");
+    </script>
+</form>
+
+

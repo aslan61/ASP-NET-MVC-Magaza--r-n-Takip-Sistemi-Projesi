@@ -1,0 +1,34 @@
+﻿@using MVCMağazaÜrünTakipSistemi.Models.Siniflar
+@model List<SatisHareket>
+@{
+    ViewBag.Title = "SatisDetay";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<h2>Satiş Detayı</h2>
+<br />
+<table class="table table-condensed">
+    <tr>
+        <th>Satış Id</th>
+        <th>Ürün</th>
+        <th>Cari</th>
+        <th>Personel</th>
+        <th>Adet</th>
+        <th>Toplam</th>
+        <th>Tarih</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+    <tr>
+        <td>@x.Satisid</td>
+        <td>@x.Uruns.UrunAd</td>
+        <td>@x.Cariler.CariAd  @x.Cariler.CariSoyad</td>
+        <td>@x.Personel.PersonelAd  @x.Personel.PersonelSoyad</td>
+        <td>@x.Adet</td>
+        <td>@x.ToplamTutar</td>
+        <td>@x.Tarih</td>
+    </tr>
+    }
+
+</table>
+<button class="btn btn-default" style="background-color:dodgerblue">Yazdır</button>
+

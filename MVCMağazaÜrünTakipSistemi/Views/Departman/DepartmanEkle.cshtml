@@ -1,0 +1,19 @@
+﻿@model MVCMağazaÜrünTakipSistemi.Models.Siniflar.Departman
+@{
+    ViewBag.Title = "DepartmanEkle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+<h2>Yeni Departman Sayfası</h2>
+<br />
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.DepartmanAd)
+    @Html.TextAreaFor(x => x.DepartmanAd, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info" id="btn1">Kaydet</button>
+    <script>
+        swal("Departman Ekleme", "Departman Başarılı Bir Şekilde Eklendi.", "success");
+    </script>
+</form>
+
+
